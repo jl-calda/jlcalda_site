@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteType } from "../_types";
+import { RouteType } from "../../_types";
 import Link from "next/link";
 import clsx from "clsx";
 
@@ -20,11 +20,17 @@ const NavbarItem: React.FC<NavbarItemProps> = ({ route }) => {
       className={clsx(
         "px-3 py-2 rounded-sm",
         "tracking-wide",
+        "hover:bg-gray-200",
+        "hover:text-gray-800",
+        "cursor-pointer",
+        "sm:text-2xl",
         route.isActive ? "text-gray-800" : "text-gray-500",
         route.isActive ? "bg-gray-200" : "bg-transparent"
       )}
     >
-      <li className={clsx("text-sm", merriweather.className)}>{route.label}</li>
+      <li className={clsx("text-sm", merriweather.className, "sm:text-base")}>
+        {route.label}
+      </li>
     </Link>
   );
 };

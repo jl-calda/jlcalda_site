@@ -1,10 +1,12 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import useRoutes from "../_hooks/useRoutes";
-import { RouteType } from "../_types";
+import useRoutes from "../../_hooks/useRoutes";
+import { RouteType } from "../../_types";
 import NavbarItem from "./NavbarItem";
 import clsx from "clsx";
+import { AiOutlineRocket } from "react-icons/ai";
+import { FaLaptopCode } from "react-icons/fa";
 
 import { Fondamento } from "next/font/google";
 
@@ -14,6 +16,7 @@ const fondamento = Fondamento({
 });
 
 import { Merriweather } from "next/font/google";
+import Button from "../Button";
 const merriweather = Merriweather({
   subsets: ["cyrillic"],
   weight: ["700"],
@@ -25,41 +28,32 @@ const Navbar = (props: Props) => {
   const routes = useRoutes();
   const router = useRouter();
   return (
-    <nav className="absolute flex flex-col w-full sm:justify-end border-b border-gray-100">
+    <nav className="relative flex flex-col w-full sm:justify-end border-b sm:pb-4 border-gray-100">
       <div className="flex flex-row justify-between items-center px-2 mt-2 ">
         <div
           onClick={() => router.push("/")}
           className={clsx(
-            "ml-8 text-3xl font-bold",
+            "ml-4 text-4xl font-bold",
             "text-gray-700",
-            "px-4 py-2 rounded-md",
+            "w-10 h-10 rounded-full",
+            "flex flex-row items-center justify-center",
             "cursor-pointer",
             fondamento.className
           )}
         >
-          JL
+          {/* <FaLaptopCode size={30} /> */}
+          <span>{`JL`}</span>
         </div>
-        <button
+        <Button
+          label="Contact"
+          icon={AiOutlineRocket}
           onClick={() => {}}
-          className={clsx(
-            "mr-4 px-3 py-2 rounded-md",
-            "text-sm text-gray-400",
-            "border",
-            "bg-gray-900",
-            "text-white text-sm",
-            "cursor-pointer",
-            "hover:bg-gray-800 hover:text-gray-200",
-            "shadow-sm",
-            merriweather.className
-          )}
-        >
-          Connect
-        </button>
+        />
       </div>
       <ul
         className={clsx(
           "flex flex-row space-x-2 items-center justify-around p-2",
-          "sm:flex sm:flex-col sm:space-y-2 sm:justify-start"
+          "sm:absolute sm:top-16 sm:right-0 sm:flex-col sm:space-y-2 sm:justify-start"
         )}
       >
         {routes.map((route: RouteType) => (
