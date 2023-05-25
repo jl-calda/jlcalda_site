@@ -35,7 +35,6 @@ const Navbar = (props: Props) => {
           className={clsx(
             "ml-4 text-4xl font-bold",
             "text-gray-700",
-            "w-10 h-10 rounded-full",
             "flex flex-row items-center justify-center",
             "cursor-pointer",
             fondamento.className

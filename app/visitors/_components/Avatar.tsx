@@ -14,12 +14,14 @@ const Avatar: React.FC<AvatarProps> = ({ name, image }) => {
     <>
       <div
         className={
-          "flex flex-row justify-between px-2 space-x-2 items-center h-16"
+          "flex flex-row justify-between px-2 space-x-2 items-center h-20"
         }
       >
         <div className="flex flex-row items-center justify-center space-x-2">
-          <span className="text-sm">Hello!</span>
-          <span className="hidden sm:block text-sm">nice seeing you here!</span>
+          <span className="text-base">Hello!</span>
+          <span className="hidden sm:block text-base">
+            nice seeing you here!
+          </span>
           <div className="px-3 py-2 rounded-md flex flex-row items-center justify-center space-x-4">
             <Image
               src={image ? image : "/images/avatars/placeholder.png"}
@@ -38,10 +40,7 @@ const Avatar: React.FC<AvatarProps> = ({ name, image }) => {
           className="p-2 rounded-md cursor-pointer items-center justify-center flex hover:bg-gray-100"
         >
           <span>Logout</span>
-          <RiLogoutBoxRLine
-            size={30}
-            className="hover:text-gray-900"
-          />
+          <RiLogoutBoxRLine size={30} />
         </div>
       </div>
     </>

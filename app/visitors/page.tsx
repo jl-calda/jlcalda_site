@@ -9,13 +9,11 @@ type Props = {};
 
 const VisitorsPage = (props: Props) => {
   return (
-    <Section>
-      <div className="flex flex-col space-y-2">
-        <LoginBar />
-        <MessagesBox />
-        <MessageInput />
-      </div>
-    </Section>
+    <div className="flex flex-col space-y-2">
+      <LoginBar />
+      <MessagesBox />
+      <MessageInput />
+    </div>
   );
 };
 

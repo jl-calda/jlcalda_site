@@ -9,19 +9,14 @@ const merriweather = Merriweather({
 
 export default function Home() {
   return (
-    <Section>
-      <div className="prose">
-        <h1
-          className={clsx(
-            merriweather.className,
-            "text-gray-800 tracking-wider"
-          )}
-        >
-          Joey Calda
-        </h1>
-        <p>Hi, I'm Joey. I'm a self taught web developer based in Singapore.</p>
-        <p>Current stack will be Next.js, tailwind.css</p>
-      </div>
-    </Section>
+    <div className="prose">
+      <h1
+        className={clsx(merriweather.className, "text-gray-800 tracking-wider")}
+      >
+        Joey Calda
+      </h1>
+      <p>Hi, I'm Joey. I'm a self taught web developer based in Singapore.</p>
+      <p>Current stack will be Next.js, tailwind.css</p>
+    </div>
   );
 }

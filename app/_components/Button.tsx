@@ -11,11 +11,13 @@ const merriweather = Merriweather({
 interface ButtonProps {
   label: string;
   icon?: IconType | undefined;
-  onClick: () => void;
+  onClick?: () => void;
   secondary?: boolean;
   small?: boolean;
   full?: boolean;
   edgy?: boolean;
+  type?: "button" | "submit" | "reset" | undefined;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -26,9 +28,13 @@ const Button: React.FC<ButtonProps> = ({
   small,
   full,
   edgy,
+  type = "button",
+  disabled,
 }) => {
   return (
     <button
+      disabled={disabled}
+      type={type}
       onClick={onClick}
       className={clsx(
         edgy ? "rounded-sm" : "rounded-md",

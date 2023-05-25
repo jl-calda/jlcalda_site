@@ -4,6 +4,7 @@ import { Merriweather_Sans } from "next/font/google";
 import AuthContext from "./_context/AuthContext";
 import getCurrentUser from "./_actions/getCurrentUser";
 import { Tooltip } from "react-tooltip";
+import Section from "./_components/Section";
 
 const merriweatherSans = Merriweather_Sans({ subsets: ["latin"] });
 
@@ -22,13 +23,11 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${merriweatherSans.className} bg-stone-50 text-gray-600 h-full`}
+        className={`${merriweatherSans.className} bg-stone-50 text-gray-600 h-[100vh] relative max-w-4xl mx-auto flex flex-col`}
       >
         <AuthContext>
-          <main className={`max-w-4xl mx-auto`}>
-            <Navbar />
-            <div className="h-[100vh]">{children}</div>
-          </main>
+          <Navbar />
+          <Section>{children}</Section>
         </AuthContext>
       </body>
     </html>

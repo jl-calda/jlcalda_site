@@ -8,8 +8,8 @@ type Props = {};
 
 const SocialSignin = (props: Props) => {
   return (
-    <div className="flex flex-col space-y-2 h-16 justify-center">
-      <span className="text-sm">Login to to say hi.👋</span>
+    <div className="flex flex-col space-y-2 h-20 justify-center">
+      <span className="text-base">Login to to say hi.👋</span>
       <div className="flex flex-row space-x-1">
         <Button
           label="Google"
