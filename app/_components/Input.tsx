@@ -28,7 +28,7 @@ const Input: React.FC<InputProps> = ({
       placeholder={placeholder}
       disabled={disabled}
       {...register(id, { required })}
-      className="w-full p-2 border-2 border-gray-200 rounded-md focus:outline-none focus:border-gray-400"
+      className="w-full p-2 border text-base border-gray-800 rounded-sm font-light focus:outline-none focus:outline-teal-500"
     />
   );
 };

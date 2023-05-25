@@ -8,7 +8,7 @@ type Props = {};
 
 const SocialSignin = (props: Props) => {
   return (
-    <div className="flex flex-col space-y-2 h-20 justify-center">
+    <div className="flex flex-col space-y-2 h-20 justify-center px-2">
       <span className="text-base">Login to to say hi.👋</span>
       <div className="flex flex-row space-x-1">
         <Button
@@ -27,14 +27,14 @@ const SocialSignin = (props: Props) => {
           edgy
           onClick={() => signIn("github")}
         />
-        <Button
-          label="Email"
+        {/* <Button
+          label=""
           icon={RiMailFill}
           secondary
           small
           edgy
           onClick={() => {}}
-        />
+        /> */}
       </div>
     </div>
   );

@@ -44,6 +44,7 @@ const Button: React.FC<ButtonProps> = ({
         secondary ? "border-gray-800" : "border-gray-800",
         secondary ? "bg-white" : "bg-gray-800",
         secondary ? "hover:bg-gray-100" : "hover:bg-gray-700",
+        "focus:outline-teal-500",
         full && "w-full",
         small ? "text-xs" : "text-sm",
         "cursor-pointer",

@@ -9,7 +9,6 @@ type Props = {};
 
 const LoginBar = (props: Props) => {
   const { data, status } = useSession();
-  console.log(data);
 
   return (
     <>
