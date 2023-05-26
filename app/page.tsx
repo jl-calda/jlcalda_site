@@ -15,6 +15,7 @@ export default function Home() {
       >
         Joey Calda
       </h1>
+      <h3>WEB DEVELOPER</h3>
       <p>Hi, I'm Joey. I'm a self taught web developer based in Singapore.</p>
       <p>Current stack will be Next.js, tailwind.css</p>
     </div>

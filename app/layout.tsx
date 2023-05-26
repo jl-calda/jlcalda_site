@@ -5,6 +5,7 @@ import AuthContext from "./_context/AuthContext";
 import getCurrentUser from "./_actions/getCurrentUser";
 import { Tooltip } from "react-tooltip";
 import Section from "./_components/Section";
+import clsx from "clsx";
 
 const merriweatherSans = Merriweather_Sans({ subsets: ["latin"] });
 
@@ -23,7 +24,11 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${merriweatherSans.className} bg-stone-50 text-gray-600 h-[100vh] relative max-w-4xl mx-auto flex flex-col`}
+        className={clsx(
+          merriweatherSans.className,
+          "bg-white",
+          "text-gray-600 h-[100vh] relative max-w-5xl mx-auto flex flex-col"
+        )}
       >
         <AuthContext>
           <Navbar />
@@ -33,3 +38,4 @@ export default async function RootLayout({
     </html>
   );
 }
+// linear-gradient(to right, #0f2027, #203a43, #2c5364);

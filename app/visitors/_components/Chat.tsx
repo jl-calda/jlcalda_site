@@ -19,7 +19,7 @@ const Chat: React.FC<MessageProps> = ({ message }) => {
         alt="user image"
         width={40}
         height={40}
-        className="rounded-full"
+        className="rounded-full m-0"
       />
     </div>
   );

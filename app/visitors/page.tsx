@@ -17,7 +17,7 @@ const VisitorsPage = async (props: Props) => {
 
   console.log(messages);
   return (
-    <div className="flex flex-col space-y-2">
+    <div className="flex flex-col space-y-2 prose">
       <LoginBar />
       <MessagesBox messages={messages} />
       <MessageInput />

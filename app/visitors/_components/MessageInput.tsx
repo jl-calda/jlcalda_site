@@ -18,6 +18,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 
 const MessageInput = () => {
+  const bottomRef = React.useRef<HTMLDivElement>(null);
   const router = useRouter();
   const session = useSession();
   const [isLoading, setIsLoading] = useState(false);

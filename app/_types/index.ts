@@ -3,3 +3,13 @@ export type RouteType = {
   href: string;
   isActive: boolean;
 };
+
+// @ /projects
+export type ProjectType = {
+  title: string;
+  description: string;
+  stack: string[];
+  images: string[];
+  liveUrl: string;
+  githubUrl: string;
+};

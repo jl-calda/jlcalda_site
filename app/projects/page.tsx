@@ -1,9 +1,19 @@
 import React from "react";
 
-type Props = {};
+import { projects } from "./_data/projects";
+import ProjectCard from "./_components/ProjectCard";
 
-const ProjectsPage = (props: Props) => {
-  return <div>ProjectsPage</div>;
+const ProjectsPage = () => {
+  return (
+    <div>
+      {projects.map((project) => (
+        <ProjectCard
+          key={crypto.randomUUID()}
+          project={project}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default ProjectsPage;
