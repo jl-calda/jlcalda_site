@@ -17,14 +17,13 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="prose py-4 px-6">
+    <div className="prose py-4 px-6 m-0">
       <h2>{project.title}</h2>
       <div className="sm:hidden">
         <ImageCarousel data={project.images} />
       </div>
-
-      <div className="sm:grid sm:grid-cols-3 sm:gap-x-2">
-        <div className="col-span-2">
+      <div className="sm:grid sm:grid-cols-2 sm:gap-x-2">
+        <div className="col-span-1">
           <div className="flex flex-row space-x-2 item-center">
             {project.stack.map((item) => (
               <StackIcon
@@ -54,13 +53,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </TooltipBox>
           </div>
         </div>
-        <div className="w-full h-full relative">
-          <Image
-            src={project.images[0]}
-            fill
-            className="m-0 rounded-sm object-center object-cover"
-            alt={`${project.title} sample image`}
-          />
+        <div className="hidden sm:block">
+          <ImageCarousel data={project.images} />
         </div>
       </div>
     </div>

@@ -69,7 +69,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ data }) => {
           <Image
             src={item}
             width={400}
-            height={200}
+            height={300}
             className="rounded-sm"
             alt="carousel image"
           />
