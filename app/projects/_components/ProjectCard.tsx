@@ -10,21 +10,34 @@ import StackIcon from "./StackIcon";
 import Image from "next/image";
 import ImageCarousel from "./ImageCarousel";
 import TooltipBox from "@/app/_components/TooltipBox";
+import ImageListBox from "./ImageListBox";
+import ImageList from "./ImageList";
 
 interface ProjectCardProps {
   project: ProjectType;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const router = useRouter();
   return (
-    <div className="prose py-4 px-6 m-0">
-      <h2>{project.title}</h2>
-      <div className="sm:hidden">
-        <ImageCarousel data={project.images} />
+    <div className="py-2 px-4 m-0 min-w-full flex flex-col space-y-4 grow">
+      <h3
+        className="cursor-pointer hover:opacity-90 m-0"
+        onClick={() => router.push(`/projects/${project.projectId}`)}
+      >
+        {project.title}
+      </h3>
+      <div className="sm:hidden relative w-full min-h-[18vh]">
+        <Image
+          src={project.images[0]}
+          fill
+          alt="project photo"
+          className="object-top rounded-md object-contain m-0"
+        />
       </div>
-      <div className="sm:grid sm:grid-cols-2 sm:gap-x-2">
-        <div className="col-span-1">
-          <div className="flex flex-row space-x-2 item-center">
+      <div className="sm:grid sm:grid-cols-3 sm:gap-x-2">
+        <div className="sm:col-span-1">
+          <div className="flex flex-row flex-wrap gap-y-2 gap-x-2 item-center">
             {project.stack.map((item) => (
               <StackIcon
                 key={crypto.randomUUID()}
@@ -32,8 +45,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               />
             ))}
           </div>
-          <p>{project.description}</p>
-          <div className="flex flex-row space-x-2">
+          <p className="">{project.description}</p>
+          <div className="flex flex-row flex-wrap gap-x-2 gap-y-2">
             <TooltipBox text="Go to github repo">
               <Button
                 edgy
@@ -53,8 +66,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </TooltipBox>
           </div>
         </div>
-        <div className="hidden sm:block">
-          <ImageCarousel data={project.images} />
+        <div className="hidden sm:block sm:col-span-2">
+          <ImageList images={project.images} />
         </div>
       </div>
     </div>

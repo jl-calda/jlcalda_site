@@ -4,7 +4,7 @@ interface SectionProps {
 }
 const Section: React.FC<SectionProps> = ({ children }) => {
   return (
-    <section className="mt-24 sm:mt-16 p-4 sm:first-letter mr-24 h-full">
+    <section className="mt-[101px] sm:mt-16 sm:first-letter sm:mr-[120px] h-full flex flex-col items-center">
       {children}
     </section>
   );

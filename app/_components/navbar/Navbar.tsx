@@ -28,7 +28,7 @@ const Navbar = (props: Props) => {
   const routes = useRoutes();
   const router = useRouter();
   return (
-    <div className="fixed w-full max-w-5xl mx-auto bg-gray-50">
+    <div className="fixed w-full max-w-5xl mx-auto bg-stone-50 z-[2000] shadow-sm">
       <nav className="relative flex flex-col w-full sm:justify-end border-b sm:pb-4 border-gray-100">
         <div className="flex flex-row justify-between items-center px-2 mt-2 ">
           <div

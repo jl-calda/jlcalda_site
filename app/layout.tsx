@@ -1,12 +1,14 @@
-import Navbar from "./_components/navbar/Navbar";
-import "./globals.css";
 import { Merriweather_Sans } from "next/font/google";
-import AuthContext from "./_context/AuthContext";
-import getCurrentUser from "./_actions/getCurrentUser";
-import { Tooltip } from "react-tooltip";
-import Section from "./_components/Section";
+import { Toaster } from "react-hot-toast";
 import clsx from "clsx";
 
+import AuthContext from "./_context/AuthContext";
+import getCurrentUser from "./_actions/getCurrentUser";
+
+import Navbar from "./_components/navbar/Navbar";
+import Section from "./_components/Section";
+
+import "./globals.css";
 const merriweatherSans = Merriweather_Sans({ subsets: ["latin"] });
 
 export const metadata = {
@@ -26,11 +28,12 @@ export default async function RootLayout({
       <body
         className={clsx(
           merriweatherSans.className,
-          "bg-white",
+          "bg-stone-50",
           "text-gray-600 h-[100vh] relative max-w-5xl mx-auto flex flex-col"
         )}
       >
         <AuthContext>
+          <Toaster />
           <Navbar />
           <Section>{children}</Section>
         </AuthContext>

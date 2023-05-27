@@ -11,7 +11,9 @@ const TooltipBox: React.FC<TooltipBoxProps> = ({ children, text }) => {
   return (
     <Tooltip.Provider>
       <Tooltip.Root>
-        <Tooltip.Trigger asChild>{children}</Tooltip.Trigger>
+        <Tooltip.Trigger asChild>
+          <div>{children}</div>
+        </Tooltip.Trigger>
         <Tooltip.Portal>
           <Tooltip.Content
             className="bg-slate-800 text-white text-xs p-2 rounded-sm"

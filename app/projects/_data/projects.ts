@@ -52,6 +52,7 @@ export const stacks = [
 
 export const projects = [
   {
+    projectId: "netflix-clone",
     title: "Netflix Clone",
     description:
       "A netflix clone using next-js, tailwindcss, next-auth and mondodb. This app is based on the tutorial by coding with antonio on youtube.",
@@ -67,6 +68,23 @@ export const projects = [
     githubUrl: "https://github.com/jl-calda/next-netflix-clone",
   },
   {
+    projectId: "airbnb-clone",
+    title: "Airbnb Clone",
+    description:
+      "A twitter using next-js (app router), tailwindcss, next-auth and mondodb. This app is based on the tutorial by coding with antonio on youtube.",
+    stack: ["next-js", "tailwindcss", "next-auth", "mongodb", "typescript"],
+    images: [
+      "/images/airbnb-clone/photo-1.png",
+      "/images/airbnb-clone/photo-2.png",
+      "/images/airbnb-clone/photo-3.png",
+      "/images/airbnb-clone/photo-4.png",
+      "/images/airbnb-clone/photo-5.png",
+    ],
+    liveUrl: "https:jl-next-airbnb-clone.vercel.app",
+    githubUrl: "https://github.com/jl-calda/next-airbnb-clone",
+  },
+  {
+    projectId: "twitter-clone",
     title: "Twitter Clone",
     description:
       "A twitter using next-js, tailwindcss, next-auth, prisma and mondodb. This app is based on the tutorial by coding with antonio on youtube.",
@@ -89,21 +107,7 @@ export const projects = [
     githubUrl: "https://github.com/jl-calda/next-twitter-clone",
   },
   {
-    title: "Airbnb Clone",
-    description:
-      "A twitter using next-js (app router), tailwindcss, next-auth and mondodb. This app is based on the tutorial by coding with antonio on youtube.",
-    stack: ["next-js", "tailwindcss", "next-auth", "mongodb", "typescript"],
-    images: [
-      "/images/airbnb-clone/photo-1.png",
-      "/images/airbnb-clone/photo-2.png",
-      "/images/airbnb-clone/photo-3.png",
-      "/images/airbnb-clone/photo-4.png",
-      "/images/airbnb-clone/photo-5.png",
-    ],
-    liveUrl: "https:jl-next-airbnb-clone.vercel.app",
-    githubUrl: "https://github.com/jl-calda/next-airbnb-clone",
-  },
-  {
+    projectId: "messenger-clone",
     title: "Messenger Clone",
     description:
       "A twitter using next-js (app router), tailwindcss, headless-ui, next-auth,pusher and mondodb. This app is based on the tutorial by coding with antonio on youtube.",

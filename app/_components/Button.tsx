@@ -9,13 +9,14 @@ const merriweather = Merriweather({
 });
 
 interface ButtonProps {
-  label: string;
+  label?: string;
   icon?: IconType | undefined;
   onClick?: () => void;
   secondary?: boolean;
   small?: boolean;
   full?: boolean;
   edgy?: boolean;
+  rounded?: boolean;
   type?: "button" | "submit" | "reset" | undefined;
   disabled?: boolean;
 }
@@ -29,7 +30,8 @@ const Button: React.FC<ButtonProps> = ({
   full,
   edgy,
   type = "button",
-  disabled,
+  disabled = false,
+  rounded,
 }) => {
   return (
     <button
@@ -37,8 +39,9 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       onClick={onClick}
       className={clsx(
-        edgy ? "rounded-sm" : "rounded-md",
-        "px-3 py-2",
+        rounded ? "rounded-full" : edgy ? "rounded-sm" : "rounded-md",
+        rounded && "w-10 h-10",
+        !rounded && "px-3 py-2",
         "flex flex-row items-center justify-center space-x-2",
         "border",
         secondary ? "border-gray-800" : "border-gray-800",
@@ -58,14 +61,16 @@ const Button: React.FC<ButtonProps> = ({
           className={clsx(secondary ? "text-gray-600" : "text-white")}
         />
       )}
-      <span
-        className={clsx(
-          secondary ? "text-gray-600" : "text-white",
-          secondary ? "hover:text-gray-900" : "hover:text-gray-200"
-        )}
-      >
-        {label}
-      </span>
+      {label && (
+        <span
+          className={clsx(
+            secondary ? "text-gray-600" : "text-white",
+            secondary ? "hover:text-gray-900" : "hover:text-gray-200"
+          )}
+        >
+          {label}
+        </span>
+      )}
     </button>
   );
 };
