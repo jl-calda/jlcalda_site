@@ -13,4 +13,5 @@ export type ProjectType = {
   images: string[];
   liveUrl: string;
   githubUrl: string;
+  featured: boolean;
 };

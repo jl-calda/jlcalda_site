@@ -1,9 +1,10 @@
 "use client";
 
 import { signIn, signOut, useSession } from "next-auth/react";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { RiLogoutCircleRFill } from "react-icons/ri";
 import Image from "next/image";
+import { FcGoogle } from "react-icons/fc";
 
 import Button from "@/app/_components/Button";
 import TooltipBox from "@/app/_components/TooltipBox";
@@ -35,7 +36,7 @@ const SocialSignin = (props: Props) => {
           </div>
         </div>
       ) : (
-        <div className="text-base">Login to to say hi.👋</div>
+        <div className="text-base">Login to say hi.👋</div>
       )}
 
       {status === "authenticated" ? (
@@ -56,7 +57,7 @@ const SocialSignin = (props: Props) => {
           <TooltipBox text="Login via google">
             <Button
               rounded
-              icon={FaGoogle}
+              icon={FcGoogle}
               secondary
               onClick={() => signIn("google")}
             />

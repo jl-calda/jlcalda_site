@@ -66,6 +66,7 @@ export const projects = [
     ],
     liveUrl: "https:jl-next-netflix-clone.vercel.app",
     githubUrl: "https://github.com/jl-calda/next-netflix-clone",
+    featured: true,
   },
   {
     projectId: "airbnb-clone",
@@ -82,6 +83,7 @@ export const projects = [
     ],
     liveUrl: "https:jl-next-airbnb-clone.vercel.app",
     githubUrl: "https://github.com/jl-calda/next-airbnb-clone",
+    featured: true,
   },
   {
     projectId: "twitter-clone",
@@ -105,6 +107,7 @@ export const projects = [
     ],
     liveUrl: "https:jl-next-twitter-clone.vercel.app",
     githubUrl: "https://github.com/jl-calda/next-twitter-clone",
+    featured: true,
   },
   {
     projectId: "messenger-clone",
@@ -128,5 +131,6 @@ export const projects = [
     ],
     liveUrl: "https:jl-next-airbnb-clone.vercel.app",
     githubUrl: "https://github.com/jl-calda/next-messenger-clone",
+    featured: true,
   },
 ];

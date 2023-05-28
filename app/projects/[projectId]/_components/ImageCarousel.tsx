@@ -1,13 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 type ImageCarouselProps = {
-  data: string[];
+  data: string[] | null;
 };
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ data }) => {
+  if (!data) return null;
   return (
     <div
       style={{
@@ -18,7 +21,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ data }) => {
       <Carousel
         additionalTransfrom={0}
         arrows
-        autoPlaySpeed={2000}
+        autoPlaySpeed={3000}
         centerMode={false}
         className=""
         containerClass="container"
@@ -65,13 +68,25 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ data }) => {
         slidesToSlide={1}
         swipeable
       >
-        {data.map((item) => (
-          <Image
-            src={item}
-            width={400}
-            height={300}
-            className="rounded-sm"
-            alt="carousel image"
+        {data.map((image) => (
+          //   <div className="relative block h-full w-full m-auto">
+          //     <Image
+          //       src={image}
+          //       fill
+          //       alt={""}
+          //     />
+          //   </div>
+          // )
+          // (
+          <img
+            key={crypto.randomUUID()}
+            src={image}
+            style={{
+              display: "block",
+              height: "100%",
+              margin: "auto",
+              width: "100%",
+            }}
           />
         ))}
       </Carousel>

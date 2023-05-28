@@ -37,7 +37,7 @@ const Chat: React.FC<MessageProps> = ({ message }) => {
       className={clsx(
         "flex flex-row items-center",
         isSender ? "justify-end" : "justify-start",
-        "space-x-2 mr-4"
+        "space-x-2 mr-4 px-2"
       )}
     >
       {isSender ? (

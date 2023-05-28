@@ -73,7 +73,7 @@ const MessagesBox: React.FC<MessagesBoxProps> = ({ messages }) => {
           disabled={isLoading}
           type="text"
           {...register("message", { required: true })}
-          className="focus:outline-none flex-1 py-2 px-3 rounded-bl-md border-gray-800"
+          className="focus:outline-none flex-1 py-2 px-3 rounded-bl-md focus:border-gray-600 focus:border"
         />
         <button
           type="submit"
