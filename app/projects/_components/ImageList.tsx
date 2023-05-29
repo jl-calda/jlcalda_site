@@ -13,7 +13,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
         <Image
           src={images[0]}
           fill
-          className="object-cover m-0 object-center rounded-md"
+          className="object-cover m-0 object-center rounded-md shadow-md"
           alt="screenshot of project"
         />
       </div>
@@ -21,7 +21,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
         <Image
           src={images[1]}
           fill
-          className="object-cover m-0 object-center rounded-md"
+          className="object-cover m-0 object-center rounded-md shadow-md"
           alt="screenshot of project"
         />
       </div>
@@ -29,7 +29,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
         <Image
           src={images[2]}
           fill
-          className="object-cover m-0 object-center rounded-md"
+          className="object-cover m-0 object-center rounded-md shadow-md"
           alt="screenshot of project"
         />
       </div>
@@ -37,7 +37,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
         <Image
           src={images[3]}
           fill
-          className="object-cover m-0 object-center rounded-md"
+          className="object-cover m-0 object-center rounded-md shadow-md"
           alt="screenshot of project"
         />
       </div>
@@ -45,7 +45,7 @@ const ImageList: React.FC<ImageListProps> = ({ images }) => {
         <Image
           src={images[4]}
           fill
-          className="object-cover m-0 object-center rounded-md"
+          className="object-cover m-0 object-center rounded-md shadow-md"
           alt="screenshot of project"
         />
       </div>

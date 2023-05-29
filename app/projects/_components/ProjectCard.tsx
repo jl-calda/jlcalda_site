@@ -1,16 +1,14 @@
 "use client";
 
-import Button from "@/app/_components/Button";
-import { ProjectType } from "@/app/_types";
-import React from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { BsGlobe2 } from "react-icons/bs";
-import { useRouter } from "next/navigation";
+
+import Button from "@/app/_components/Button";
+import { ProjectType } from "@/app/_types";
 import StackIcon from "./StackIcon";
-import Image from "next/image";
-import ImageCarousel from "./ImageCarousel";
 import TooltipBox from "@/app/_components/TooltipBox";
-import ImageListBox from "./ImageListBox";
 import ImageList from "./ImageList";
 
 interface ProjectCardProps {
@@ -27,15 +25,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       >
         {project.title}
       </h3>
-      <div className="sm:hidden relative w-full min-h-[18vh]">
-        <Image
+      <div className="sm:hidden relative w-full">
+        <img
+          src={project.images[0]}
+          alt="project photo"
+          className="rounded-md object-cover m-0"
+        />
+        {/* <Image
           src={project.images[0]}
           fill
           alt="project photo"
           className="object-top rounded-md object-contain m-0"
-        />
+        /> */}
       </div>
-      <div className="sm:grid sm:grid-cols-3 sm:gap-x-2">
+      <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-x-2">
         <div className="sm:col-span-1">
           <div className="flex flex-row flex-wrap gap-y-2 gap-x-2 item-center">
             {project.stack.map((item) => (
@@ -66,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </TooltipBox>
           </div>
         </div>
-        <div className="hidden sm:block sm:col-span-2">
+        <div className="hidden sm:block md:col-span-2">
           <ImageList images={project.images} />
         </div>
       </div>

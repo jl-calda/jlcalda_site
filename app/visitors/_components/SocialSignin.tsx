@@ -16,7 +16,7 @@ const SocialSignin = (props: Props) => {
 
   const { data, status } = session;
   return (
-    <div className="w-full shadow-sm bg-white py-2 px-2 rounded-tr-md rounded-tl-md flex flex-row space-x-2 items-center justify-between">
+    <div className="w-full shadow-sm bg-white px-2 rounded-tr-md rounded-tl-md flex flex-row space-x-2 items-center justify-between">
       {status === "authenticated" ? (
         <div>
           {" "}
@@ -43,31 +43,27 @@ const SocialSignin = (props: Props) => {
         <div>
           {" "}
           <TooltipBox text="Logout">
-            <Button
-              disabled={false}
-              rounded
-              icon={RiLogoutCircleRFill}
-              secondary
+            <RiLogoutCircleRFill
+              className="cursor-pointer p-2 hover:opacity-90 hover:scale-x-105"
               onClick={() => signOut()}
+              size={40}
             />
           </TooltipBox>
         </div>
       ) : (
         <div className="flex flex-row space-x-1">
           <TooltipBox text="Login via google">
-            <Button
-              rounded
-              icon={FcGoogle}
-              secondary
+            <FcGoogle
+              className="cursor-pointer p-2 hover:opacity-90 hover:scale-x-105"
               onClick={() => signIn("google")}
+              size={40}
             />
           </TooltipBox>
           <TooltipBox text="Login via github">
-            <Button
-              rounded
-              icon={FaGithub}
-              secondary
+            <FaGithub
+              className="cursor-pointer p-2 hover:opacity-90 hover:scale-x-105"
               onClick={() => signIn("github")}
+              size={40}
             />
           </TooltipBox>
         </div>

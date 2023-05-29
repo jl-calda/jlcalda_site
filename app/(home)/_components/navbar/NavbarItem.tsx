@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteType } from "../../_types";
+import { RouteType } from "../../../_types";
 import Link from "next/link";
 import clsx from "clsx";
 

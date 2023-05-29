@@ -3,8 +3,9 @@ import { Merriweather } from "next/font/google";
 import getMessages from "../_actions/getMessages";
 
 import MessagesBox from "./_components/MessagesBox";
-import MessageInput from "./_components/MessageInput";
 import SocialSignin from "./_components/SocialSignin";
+import getUsers from "../_actions/getUsers";
+import UsersAvatars from "./_components/UsersAvatars";
 
 const merriweather = Merriweather({
   subsets: ["cyrillic"],
@@ -15,11 +16,15 @@ export const revalidate = 10;
 
 const VisitorsPage = async () => {
   const messages = await getMessages();
+  const users = await getUsers();
 
   console.log(messages);
   return (
-    <div className="prose min-w-full h-full px-2 py-4 flex flex-col items-start space-y-2 bg-stone-50">
-      <h2 className={`${merriweather.className} my-2`}>Visitors' Page</h2>
+    <div className="prose min-w-full h-full flex flex-col items-start space-y-2 bg-stone-50">
+      <div className="w-full flex flex-row justify-between items-center">
+        <h2 className={`${merriweather.className} my-2`}>Visitors' Page</h2>
+        <UsersAvatars users={users} />
+      </div>
       <div className="flex-1 w-full h-auto">
         <MessagesBox messages={messages} />
       </div>

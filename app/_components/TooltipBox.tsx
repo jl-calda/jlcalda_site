@@ -7,9 +7,14 @@ import React from "react";
 interface TooltipBoxProps {
   children: React.ReactNode;
   text: string;
+  side?: "top" | "right" | "bottom" | "left";
 }
 
-const TooltipBox: React.FC<TooltipBoxProps> = ({ children, text }) => {
+const TooltipBox: React.FC<TooltipBoxProps> = ({
+  children,
+  text,
+  side = "top",
+}) => {
   return (
     <Tooltip.Provider>
       <Tooltip.Root>
@@ -20,6 +25,7 @@ const TooltipBox: React.FC<TooltipBoxProps> = ({ children, text }) => {
           <Tooltip.Content
             className="bg-slate-800 text-white text-xs p-2 rounded-sm"
             sideOffset={5}
+            side={side}
           >
             {text}
             <Tooltip.Arrow className="fill-white" />

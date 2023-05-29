@@ -52,16 +52,19 @@ const MessagesBox: React.FC<MessagesBoxProps> = ({ messages }) => {
   };
 
   return (
-    <div className="w-full relative rounded-md bg-gray-100 flex-flex-col px-2 py-2 border-gray-800">
+    <div className="w-full overflow-hidden flex-col relative rounded-md bg-gray-100 flex-flex-col px-2 py-2 border-gray-800">
       <SocialSignin />
       <div className="h-4 w-full" />
-      <div className="flex flex-col h-[57vh] sm:h-[62vh] space-y-2 overflow-y-scroll py-4">
+
+      <div className="flex-1flex-col h-[57vh] sm:h-[65vh] space-y-2 overflow-y-scroll py-4">
+        {/* <div className="flex-[0_0_auto] py-4 overflow-y-scroll"> */}
         {messages.map((message) => (
           <Chat
             key={crypto.randomUUID()}
             message={message}
           />
         ))}
+        {/* </div> */}
         <div ref={bottomRef} />
       </div>
       <div className="h-4 w-full" />
@@ -71,6 +74,7 @@ const MessagesBox: React.FC<MessagesBoxProps> = ({ messages }) => {
       >
         <input
           disabled={isLoading}
+          placeholder="Type a message"
           type="text"
           {...register("message", { required: true })}
           className="focus:outline-none flex-1 py-2 px-3 rounded-bl-md focus:border-gray-600 focus:border"

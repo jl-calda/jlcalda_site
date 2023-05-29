@@ -1,8 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import useRoutes from "../../_hooks/useRoutes";
-import { RouteType } from "../../_types";
+import useRoutes from "../../../_hooks/useRoutes";
+import { RouteType } from "../../../_types";
 import NavbarItem from "./NavbarItem";
 import clsx from "clsx";
 import { AiOutlineRocket } from "react-icons/ai";
@@ -16,7 +16,7 @@ const fondamento = Fondamento({
 });
 
 import { Merriweather } from "next/font/google";
-import Button from "../Button";
+import Button from "../../../_components/Button";
 const merriweather = Merriweather({
   subsets: ["cyrillic"],
   weight: ["700"],
@@ -45,7 +45,7 @@ const Navbar = (props: Props) => {
             <span>{`JL`}</span>
           </div>
           <Button
-            label="Contact"
+            label="Hire me!"
             icon={AiOutlineRocket}
             onClick={() => {}}
           />

@@ -1,6 +1,6 @@
 "use client";
 
-import { stacks } from "../_data/projects";
+import { stacks } from "../_data";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import TooltipBox from "@/app/_components/TooltipBox";
 

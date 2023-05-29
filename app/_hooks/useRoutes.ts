@@ -11,9 +11,9 @@ const useRoutes = () => {
         isActive: pathname === "/",
       },
       {
-        label: "About",
-        href: "/about",
-        isActive: pathname === "/about",
+        label: "Blogs",
+        href: "/blogs",
+        isActive: pathname === "/blogs",
       },
       {
         label: "Projects",

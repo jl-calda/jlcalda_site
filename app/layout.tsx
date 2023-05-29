@@ -5,7 +5,7 @@ import clsx from "clsx";
 import AuthContext from "./_context/AuthContext";
 import getCurrentUser from "./_actions/getCurrentUser";
 
-import Navbar from "./_components/navbar/Navbar";
+import Navbar from "./(home)/_components/navbar/Navbar";
 import Section from "./_components/Section";
 
 import "./globals.css";
