@@ -8,44 +8,44 @@ interface ImageListProps {
 
 const ImageList: React.FC<ImageListProps> = ({ images }) => {
   return (
-    <div className="w-full h-full grid grid-cols-3 grid-row-3 gap-x-2 gap-y-2">
+    <div className="w-full h-full grid grid-cols-4 grid-row-4 gap-x-2 gap-y-2">
       <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-span-2 row-span-2">
         <Image
           src={images[0]}
           fill
-          className="object-cover m-0 object-center rounded-md shadow-md"
+          className="object-cover m-0 object-center border border-black shadow-md"
           alt="screenshot of project"
         />
       </div>
-      <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-start-3 col-end-4 row-start-1 row-end-2">
+      <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-start-3 col-end-4 row-start-1 row-end-3">
         <Image
           src={images[1]}
           fill
-          className="object-cover m-0 object-center rounded-md shadow-md"
+          className="object-cover m-0 object-left border border-black shadow-md"
           alt="screenshot of project"
         />
       </div>
-      <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-start-3 col-end-4 row-start-2 row-end-3">
+      <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-start-4 col-end-5 row-start-1 row-end-3">
         <Image
           src={images[2]}
           fill
-          className="object-cover m-0 object-center rounded-md shadow-md"
+          className="object-cover m-0 object-top border border-black shadow-md"
           alt="screenshot of project"
         />
       </div>
-      <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-start-1 col-end-2 row-start-3 row-end-4">
+      <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-start-1 col-end-2 row-start-3 row-end-5">
         <Image
           src={images[3]}
           fill
-          className="object-cover m-0 object-center rounded-md shadow-md"
+          className="object-cover m-0 object-left border border-black shadow-md"
           alt="screenshot of project"
         />
       </div>
-      <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-start-2 col-end-4 row-start-3 row-end-4">
+      <div className="hover:scale-105 transition-all duration-200 cursor-pointer h-full w-full relative col-start-2 col-end-5 row-start-3 row-end-5">
         <Image
           src={images[4]}
           fill
-          className="object-cover m-0 object-center rounded-md shadow-md"
+          className="object-cover m-0 object-top border border-black shadow-md"
           alt="screenshot of project"
         />
       </div>

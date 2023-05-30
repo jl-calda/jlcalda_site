@@ -16,7 +16,7 @@ const SocialSignin = (props: Props) => {
 
   const { data, status } = session;
   return (
-    <div className="w-full shadow-sm bg-white px-2 rounded-tr-md rounded-tl-md flex flex-row space-x-2 items-center justify-between">
+    <div className="w-full shadow-sm bg-white px-2 h-[46px] rounded-tr-md rounded-tl-md border border-black flex flex-row space-x-2 items-center justify-between">
       {status === "authenticated" ? (
         <div>
           {" "}

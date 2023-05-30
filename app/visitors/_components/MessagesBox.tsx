@@ -52,12 +52,10 @@ const MessagesBox: React.FC<MessagesBoxProps> = ({ messages }) => {
   };
 
   return (
-    <div className="w-full overflow-hidden flex-col relative rounded-md bg-gray-100 flex-flex-col px-2 py-2 border-gray-800">
+    <div className="w-full h-full overflow-hidden flex-col relative border-2 border-black bg-gray-100 px-2 py-2 rounded-md">
       <SocialSignin />
       <div className="h-4 w-full" />
-
-      <div className="flex-1flex-col h-[57vh] sm:h-[65vh] space-y-2 overflow-y-scroll py-4">
-        {/* <div className="flex-[0_0_auto] py-4 overflow-y-scroll"> */}
+      <div className="flex-1 h-[62vh] sm:h-[65vh] md:h-[65vh] flex-col space-y-2 overflow-y-scroll py-4">
         {messages.map((message) => (
           <Chat
             key={crypto.randomUUID()}
@@ -65,12 +63,13 @@ const MessagesBox: React.FC<MessagesBoxProps> = ({ messages }) => {
           />
         ))}
         {/* </div> */}
+        {/* h-[57vh] sm:h-[65vh] */}
         <div ref={bottomRef} />
       </div>
       <div className="h-4 w-full" />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-row space-x-2 rounded-bl-md rounded-br-md overflow-hidden bg-white"
+        className="flex flex-row space-x-2 rounded-bl-md rounded-br-md border border-black overflow-clip bg-white"
       >
         <input
           disabled={isLoading}

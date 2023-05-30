@@ -21,7 +21,7 @@ export type HomeDataType = {
 };
 
 export const homeData = {
-  heroText: "Joey Calda",
+  heroText: "Joey L. Calda",
   heroSubtext: "Web developer",
   heroDescription:
     "I'm a web developer based in the Philippines. I'm also a freelance web developer. I'm currently accepting projects.",

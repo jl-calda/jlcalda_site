@@ -42,7 +42,7 @@ export default function Home() {
           >
             {heroText}
           </h1>
-          <h3>{heroSubtext}</h3>
+          <h3 className="uppercase">{heroSubtext}</h3>
           <p className="first-letter:font-bold first-letter:text-lg">
             {heroDescription}
           </p>
@@ -59,7 +59,7 @@ export default function Home() {
             <Image
               src={heroImage}
               fill
-              className="object-cover object-top m-0 rounded-md shadow-lg"
+              className="object-cover object-top m-0 rounded-md border-2 border-black"
               alt="Picture of the author"
             />
           </div>
@@ -67,16 +67,16 @@ export default function Home() {
             <Image
               src={heroImage}
               fill
-              className="object-cover object-top m-0 rounded-full shadow-lg"
+              className="object-cover object-top m-0 rounded-full border-2 border-black"
               alt="Picture of the author"
             />
           </div>
         </div>
       </div>
-      <h2 className="m-0 pt-8 pb-2">Skills and Tech Stacks</h2>
+      <h2 className="m-0 pt-8 pb-6">Tech Stacks</h2>
       <div className="w-full grid sm:grid-cols-2 sm:gap-x-2 gap-y-2">
         <StackLinks stack={homeData.techStacks} />
-        <div className="py-4 px-2 order-1 sm:order-2">
+        <div className="py-4 px-2 order-1 sm:order-2 bg-gray-200 text-gray-800 border-black border-2 rounded-md">
           <ImQuotesLeft className="text-4xl inline" />
           <blockquote className="my-0 mx-2 border-none inline">{`${heroQuote}`}</blockquote>
           <ImQuotesRight className="text-4xl inline" />
@@ -94,22 +94,24 @@ export default function Home() {
         Also helps me to document my learnings.
       </p>
 
-      <TooltipBox
-        text="Go to projects"
-        href="/projects"
-        side="bottom"
-      >
-        <h2 className="m-0 pt-8 pb-2 cursor-pointer">Featured Projects</h2>
-      </TooltipBox>
-      <p>Some projects I made to teach myself web development.</p>
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 grid-rows-1 sm:gap-x-4 gap-y-4">
-        {slicedFeaturedProjects.map((project, index) => (
-          <OtherProjectCard
-            key={crypto.randomUUID()}
-            project={project}
-            noText
-          />
-        ))}
+      <div className="bg-gray-200 rounded-md pt-2 px-2 py-6 border-2 border-black">
+        <TooltipBox
+          text="Go to projects"
+          href="/projects"
+          side="bottom"
+        >
+          <h2 className="m-0 pt-4 pb-2 cursor-pointer">Featured Projects</h2>
+        </TooltipBox>
+        <p>Some projects I made to teach myself web development.</p>
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 grid-rows-1 gap-x-2 gap-y-2 px-2">
+          {slicedFeaturedProjects.map((project, index) => (
+            <OtherProjectCard
+              key={crypto.randomUUID()}
+              project={project}
+              noText
+            />
+          ))}
+        </div>
       </div>
       <h2 className="m-0 pt-8 pb-2">About this site</h2>
       <p className="text-xs font-light">

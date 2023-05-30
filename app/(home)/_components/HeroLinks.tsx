@@ -13,6 +13,7 @@ const HeroLinks: React.FC<HeroLinksProps> = ({ links }) => {
     <div className="self-start sm:self-center flex flex-row flex-wrap gap-x-2 gap-y-2">
       {links.map((link) => (
         <Button
+          edgy
           secondary={link.isSecondary}
           key={crypto.randomUUID()}
           label={link.label}

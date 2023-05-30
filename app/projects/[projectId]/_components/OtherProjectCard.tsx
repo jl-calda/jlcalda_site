@@ -17,7 +17,7 @@ const OtherProjectCard: React.FC<OtherProjectTypeProps> = ({
       href={`/projects/${project.projectId}`}
       className="no-underline w-full h-full"
     >
-      <div className="h-full w-full flex flex-col md:shadow-md px-2 pt-2 pb-4 space-y-4 md:border rounded-md m-1">
+      <div className="h-full w-full flex flex-col shadow-md px-2 pt-2 pb-4 space-y-4 border border-black m-1 bg-white">
         <h4 className="flex-1 no-underline m-0 inline">{project.title}</h4>
         <img
           src={project.images[0]}

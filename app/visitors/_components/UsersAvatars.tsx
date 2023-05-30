@@ -13,8 +13,6 @@ interface UsersAvatarsProps {
 
 const UsersAvatars: React.FC<UsersAvatarsProps> = ({ users }) => {
   const session = useSession();
-  console.log(session);
-  console.log(users);
   const otherUsers =
     session.status === "authenticated"
       ? users.filter((user) => user.email !== session?.data?.user?.email)
@@ -37,7 +35,11 @@ const UsersAvatars: React.FC<UsersAvatarsProps> = ({ users }) => {
               fill
               src={user.image || "/images/placeholder.png"}
               alt={user.name || "user"}
-              className={clsx("rounded-full", index !== 0 && "-ml-6", "m-0")}
+              className={clsx(
+                "rounded-full",
+                index !== 0 && "-ml-6",
+                "m-0 border border-black"
+              )}
             />
           </div>
         </TooltipBox>

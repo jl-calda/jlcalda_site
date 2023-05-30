@@ -16,6 +16,7 @@ const LinkButtons: React.FC<LinkButtonsProps> = ({ project }) => {
     <div className="flex flex-row flex-wrap gap-x-2 gap-y-2">
       <TooltipBox text="Go to github repo">
         <Button
+          edgy
           label={"Github"}
           icon={FaGithub}
           onClick={() => window.open(project?.githubUrl, "_blank")}
@@ -23,6 +24,7 @@ const LinkButtons: React.FC<LinkButtonsProps> = ({ project }) => {
       </TooltipBox>
       <TooltipBox text="Go to live site">
         <Button
+          edgy
           secondary
           onClick={() => window.open(project?.liveUrl, "_blank")}
           icon={BsGlobe2}
