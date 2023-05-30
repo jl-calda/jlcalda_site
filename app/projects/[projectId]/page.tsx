@@ -3,7 +3,7 @@ import { projects } from "../_data";
 
 import LinkButtons from "./_components/LinkButtons";
 import ImageCarousel from "./_components/ImageCarousel";
-import BackHeader from "./_components/BackHeader";
+import BackHeader from "../_components/BackHeader";
 import OtherProjectCard from "./_components/OtherProjectCard";
 
 interface IProjectPageParams {
@@ -18,7 +18,7 @@ const ProjectPage = ({ params }: { params: IProjectPageParams }) => {
   );
 
   return (
-    <div className="max-w-full h-full prose px-4 py-4">
+    <div className="max-w-full h-full prose px-2 py-2">
       <BackHeader />
       <div className="flex flex-col gap-y-2 sm:flex-row items-start sm:justify-between sm:items-center">
         <h2 className="m-0">{project?.title}</h2>

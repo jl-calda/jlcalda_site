@@ -8,7 +8,11 @@ import {
   SiHeadlessui,
   SiWebauthn,
   SiMongodb,
+  SiReact,
+  SiNodedotjs,
 } from "react-icons/si";
+
+import { TbBrandRadixUi } from "react-icons/tb";
 
 type StackType = {
   name: string;
@@ -16,6 +20,18 @@ type StackType = {
 };
 
 export const stacks = [
+  {
+    name: "radix-ui",
+    icon: TbBrandRadixUi,
+  },
+  {
+    name: "react-js",
+    icon: SiReact,
+  },
+  {
+    name: "node-js",
+    icon: SiNodedotjs,
+  },
   {
     name: "next-js",
     icon: SiNextdotjs,

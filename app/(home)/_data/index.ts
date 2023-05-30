@@ -41,13 +41,20 @@ export const homeData = {
   ],
   techStacks: [
     "next-js",
-    "react",
-    "typescript",
     "tailwindcss",
-    "node-js",
-    "prisma",
+    "next-auth",
     "mongodb",
+    "typescript",
+    "prisma",
+    "node-js",
+    "react-js",
+    "pusher",
+    "headless-ui",
+    "radix-ui",
   ],
   techStackText: "Tech Stacks",
-  techStackDescription: "I'm currently using these tech stacks in my projects.",
+  techStackQuote:
+    "These are the technologies I used in any form in my projects. I believe it is best to learn by doing projects and debugging errors.",
+  techStackDescription:
+    "These are the technologies I'm currently using. I'm also learning new technologies. Doesn't I'm expert in these technologies, who is?",
 };

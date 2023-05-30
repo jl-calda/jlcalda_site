@@ -29,7 +29,7 @@ export default async function RootLayout({
         className={clsx(
           merriweatherSans.className,
           "bg-stone-50",
-          "text-gray-600 h-[100vh] relative max-w-5xl mx-auto flex flex-col"
+          "text-gray-600 min-h-[100vh] relative max-w-5xl mx-auto flex flex-col"
         )}
       >
         <AuthContext>
