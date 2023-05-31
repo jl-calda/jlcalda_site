@@ -118,7 +118,9 @@ export default function Home() {
             Featured Projects
           </h2>
         </TooltipBox>
-        <p>Some projects I made to teach myself web development.</p>
+        <p>
+          Some projects I made to acquire more knowledge in web development.
+        </p>
         <div className="w-full  grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-x-2 gap-y-2 px-2">
           {slicedFeaturedProjects.map((project, index) => (
             <OtherProjectCard

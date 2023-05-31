@@ -15,7 +15,9 @@ const UsersAvatars: React.FC<UsersAvatarsProps> = ({ users }) => {
   const session = useSession();
   const otherUsers =
     session.status === "authenticated"
-      ? users.filter((user) => user.email !== session?.data?.user?.email)
+      ? users
+          .filter((user) => user.email !== session?.data?.user?.email)
+          .slice(0, 5)
       : users;
 
   users.filter((user) => user.email !== session?.data?.user?.email);
