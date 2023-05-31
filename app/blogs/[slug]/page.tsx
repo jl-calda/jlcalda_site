@@ -27,7 +27,10 @@ const BlogPage = ({ params }: { params: IBlogPageParams }) => {
           </p>
           <div className="flex flex-row space-x-2">
             {data.topics.map((topic: string) => (
-              <div className="px-2 py-1 bg-gray-500 text-white text-sm">
+              <div
+                key={crypto.randomUUID()}
+                className="px-2 py-1 bg-gray-500 text-white text-sm"
+              >
                 {topic}
               </div>
             ))}
