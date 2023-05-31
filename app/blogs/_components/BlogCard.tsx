@@ -28,7 +28,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
       </div>
       <div className="self-start flex flex-row flex-wrap gap-x-2 gap-y-2">
         {blogData.topics.slice(0, 3).map((topic: string) => (
-          <div className="px-2 py-1 text-xs bg-gray-800 text-white rounded-sm">
+          <div
+            key={crypto.randomUUID()}
+            className="px-2 py-1 text-xs bg-gray-800 text-white rounded-sm"
+          >
             {topic}
           </div>
         ))}
