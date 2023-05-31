@@ -11,6 +11,8 @@ import OtherProjectCard from "../projects/[projectId]/_components/OtherProjectCa
 import Link from "next/link";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import TooltipBox from "../_components/TooltipBox";
+import { blogData } from "../blogs/_data";
+import BlogCard from "../blogs/_components/BlogCard";
 
 const merriweather = Merriweather({
   subsets: ["cyrillic"],
@@ -24,6 +26,10 @@ export default function Home() {
   const heroImage = homeData.heroImage;
   const heroLinks = homeData.heroLinks;
   const heroQuote = homeData.techStackQuote;
+
+  const slicedBlogs = blogData.blogs
+    .filter((blog) => blog.isFeatured)
+    .slice(0, 4);
 
   const slicedFeaturedProjects = projects
     .filter((project) => project.featured)
@@ -73,7 +79,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <h2 className="m-0 pt-8 pb-6">Tech Stacks</h2>
+      <h2 className="m-0 pt-12 pb-6">Tech Stacks</h2>
       <div className="w-full grid sm:grid-cols-2 sm:gap-x-2 gap-y-2">
         <StackLinks stack={homeData.techStacks} />
         <div className="py-4 px-2 order-1 sm:order-2 bg-gray-200 text-gray-800 border-black border-2 rounded-md">
@@ -87,23 +93,33 @@ export default function Home() {
         href="/blogs"
         side="bottom"
       >
-        <h2 className="m-0 pt-8 pb-2 cursor-pointer">Feature Blogs</h2>
+        <h2 className="m-0 pt-12 pb-2 cursor-pointer">Featured Blogs</h2>
       </TooltipBox>
       <p>
         Collection of articles I wrote which can be tutorial or a tip I learned.
         Also helps me to document my learnings.
       </p>
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-x-2 gap-y-2 px-2 mb-10">
+        {slicedBlogs.map((project) => (
+          <BlogCard
+            key={crypto.randomUUID()}
+            blog={project}
+          />
+        ))}
+      </div>
 
-      <div className="bg-gray-200 rounded-md pt-2 px-2 py-6 border-2 border-black">
+      <div className="bg-gray-800 text-white rounded-md pt-2 px-2 py-6">
         <TooltipBox
           text="Go to projects"
           href="/projects"
           side="bottom"
         >
-          <h2 className="m-0 pt-4 pb-2 cursor-pointer">Featured Projects</h2>
+          <h2 className="m-0 pt-4 pb-2 cursor-pointer text-white">
+            Featured Projects
+          </h2>
         </TooltipBox>
         <p>Some projects I made to teach myself web development.</p>
-        <div className="w-full grid grid-cols-2 md:grid-cols-4 grid-rows-1 gap-x-2 gap-y-2 px-2">
+        <div className="w-full  grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-x-2 gap-y-2 px-2">
           {slicedFeaturedProjects.map((project, index) => (
             <OtherProjectCard
               key={crypto.randomUUID()}

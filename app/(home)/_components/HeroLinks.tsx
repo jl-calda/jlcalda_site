@@ -10,7 +10,7 @@ interface HeroLinksProps {
 
 const HeroLinks: React.FC<HeroLinksProps> = ({ links }) => {
   return (
-    <div className="self-start sm:self-center flex flex-row flex-wrap gap-x-2 gap-y-2">
+    <div className="self-end flex flex-row flex-wrap gap-x-2 gap-y-2">
       {links.map((link) => (
         <Button
           edgy

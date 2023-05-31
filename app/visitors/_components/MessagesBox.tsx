@@ -55,7 +55,7 @@ const MessagesBox: React.FC<MessagesBoxProps> = ({ messages }) => {
     <div className="w-full h-full overflow-hidden flex-col relative border-2 border-black bg-gray-100 px-2 py-2 rounded-md">
       <SocialSignin />
       <div className="h-4 w-full" />
-      <div className="flex-1 h-[62vh] sm:h-[65vh] md:h-[65vh] flex-col space-y-2 overflow-y-scroll py-4">
+      <div className="flex-1 h-[58vh] sm:h-[65vh] md:h-[65vh] flex-col space-y-2 overflow-y-scroll py-4">
         {messages.map((message) => (
           <Chat
             key={crypto.randomUUID()}

@@ -2,7 +2,8 @@
 title: How to use Next-Auth with Next-JS
 slug: how-to-use-next-auth-with-next-js
 topics: ["next-js", "react-js", "next-auth"]
-author: Joey
+author: ChatGPT
+thumbnail: /blogs/thumbnails/how-to-use-next-auth-with-next-js.webp
 date: May 31, 2023
 ---
 
