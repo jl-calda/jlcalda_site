@@ -10,7 +10,7 @@ const StackLinks: React.FC<StackLinksProps> = ({ stack }) => {
     <div className="max-h-fit order-2 sm:order-1 flex flex-row flex-wrap gap-x-2 sm:gap-x-2 gap-y-2 items-center">
       {stack?.map((item) => (
         <StackIcon
-          key={crypto.randomUUID(0)}
+          key={crypto.randomUUID()}
           stack={item}
         />
       ))}
