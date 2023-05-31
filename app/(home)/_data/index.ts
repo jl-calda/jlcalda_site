@@ -24,7 +24,7 @@ export const homeData = {
   heroText: "Joey L. Calda",
   heroSubtext: "Web developer",
   heroDescription:
-    "I'm a web developer based in the Philippines. I'm also a freelance web developer. I'm currently accepting projects.",
+    "I'm a web developer based in Singapore. I'm a self-taught developer, shifting from structural engineering looking to find full time employment in web development field. .",
   heroImage: "/images/hero-image.jpg",
   heroImageAlt: "Joey Calda",
   heroLinks: [

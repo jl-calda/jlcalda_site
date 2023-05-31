@@ -56,7 +56,7 @@ export default function Home() {
             href="/info"
             className="no-underline self-start text-base"
           >
-            <p className="self-start">Read More...</p>
+            <p className="px-3 py-2 underline self-end">Read More...</p>
           </Link>
           <HeroLinks links={heroLinks} />
         </div>
@@ -99,7 +99,7 @@ export default function Home() {
         Below are collection of articles I wrote which includes tips that I
         learned and can also be use as tutorial.
       </p>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-x-2 gap-y-2 px-2 mb-10">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-x-4 gap-y-4 px-2 mb-10">
         {slicedBlogs.map((project) => (
           <BlogCard
             key={crypto.randomUUID()}
@@ -120,7 +120,7 @@ export default function Home() {
         <p>
           Some projects I made to acquire more knowledge in web development.
         </p>
-        <div className="w-full  grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-x-2 gap-y-2 px-2">
+        <div className="w-full  grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-x-4 gap-y-4 px-2">
           {slicedFeaturedProjects.map((project, index) => (
             <OtherProjectCard
               key={crypto.randomUUID()}

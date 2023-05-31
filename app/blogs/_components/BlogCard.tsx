@@ -23,7 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
         <img
           src={thumbnail}
           alt={blogData.title}
-          className="m-0 grow-0 rounded-md flex-1"
+          className="m-0 grow-0 rounded-md flex-1 w-full h-auto"
         />
       </div>
       <div className="self-start flex flex-row flex-wrap gap-x-2 gap-y-2">
