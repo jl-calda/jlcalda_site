@@ -96,8 +96,8 @@ export default function Home() {
         <h2 className="m-0 pt-12 pb-2 cursor-pointer">Featured Blogs</h2>
       </TooltipBox>
       <p>
-        Collection of articles I wrote which can be tutorial or a tip I learned.
-        Also helps me to document my learnings.
+        Below are collection of articles I wrote which includes tips that I
+        learned and can also be use as tutorial.
       </p>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-x-2 gap-y-2 px-2 mb-10">
         {slicedBlogs.map((project) => (
