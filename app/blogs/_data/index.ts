@@ -12,16 +12,33 @@ export const topics = [
   "radix-ui",
 ];
 
+export type BlogType = {
+  no: number;
+  slug: string;
+};
+
 export const blogData = {
-  featuredBlogNo: 0,
+  featuredBlogNo: 2,
   blogs: [
     {
+      isFeatured: true,
       no: 0,
-      date: "2021-08-01",
-      title: "How to use next-auth with next-js",
-      description: "This is a tutorial on how to use next-auth with next-js",
       slug: "how-to-use-next-auth-with-next-js",
-      topics: ["next-js", "next-auth"],
+    },
+    {
+      isFeatured: true,
+      no: 1,
+      slug: "using-react-hook-form",
+    },
+    {
+      isFeatured: true,
+      no: 2,
+      slug: "cloudinary-with-next-js",
+    },
+    {
+      isFeatured: true,
+      no: 3,
+      slug: "using-prisma-with-mongodb-and-next-js",
     },
   ],
 };

@@ -6,6 +6,7 @@ import MessagesBox from "./_components/MessagesBox";
 import SocialSignin from "./_components/SocialSignin";
 import getUsers from "../_actions/getUsers";
 import UsersAvatars from "./_components/UsersAvatars";
+import clsx from "clsx";
 
 const merriweather = Merriweather({
   subsets: ["cyrillic"],
@@ -21,8 +22,12 @@ const VisitorsPage = async () => {
   console.log(messages);
   return (
     <div className="prose min-w-full h-full flex flex-col items-start space-y-2 bg-stone-50">
-      <div className="w-full flex flex-row justify-between items-center">
-        <h2 className={`${merriweather.className} my-2`}>Visitors' Page</h2>
+      <div className="w-full flex flex-row justify-between items-center py-2">
+        <div className="px-2 py-1 bg-gray-800 text-white flex-0 max-w-fit">
+          <h2 className={clsx(merriweather.className, "text-white", "m-0")}>
+            {`Visitors' Messages`}
+          </h2>
+        </div>
         <UsersAvatars users={users} />
       </div>
       <div className="flex-1 w-full h-auto">

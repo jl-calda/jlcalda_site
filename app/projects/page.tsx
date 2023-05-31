@@ -4,6 +4,7 @@ import { projects } from "./_data";
 import ProjectCard from "./_components/ProjectCard";
 import { Merriweather } from "next/font/google";
 import BackHeader from "./_components/BackHeader";
+import clsx from "clsx";
 
 const merriweather = Merriweather({
   subsets: ["cyrillic"],
@@ -32,7 +33,11 @@ const ProjectsPage = async ({
   return (
     <div className="prose max-w-full w-full flex flex-col items-center space-y-2 px-2 py-2">
       {!category ? (
-        <h2 className={`${merriweather.className} m-0`}>Feature Projects</h2>
+        <div className="self-start px-2 py-1 bg-gray-800 text-white flex-0 max-w-fit mb-6">
+          <h2 className={clsx(merriweather.className, "text-white", "m-0")}>
+            Featured Projects
+          </h2>
+        </div>
       ) : (
         <BackHeader title={`Projects using ${category}`} />
       )}
