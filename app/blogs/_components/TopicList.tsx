@@ -7,7 +7,10 @@ const TopicList = () => {
       <h5 className="uppercase tracking-wider font-bold max-w-fit">Topics</h5>
       <ul className="grid grid-cols-3 sm:grid-cols-4 list-none m-0 p-0">
         {topics.map((topic) => (
-          <li className="m-0 cursor-pointer text-gray-600 font-bold text-sm py-1 px-2">
+          <li
+            key={crypto.randomUUID()}
+            className="m-0 cursor-pointer text-gray-600 font-bold text-sm py-1 px-2"
+          >
             {topic}
           </li>
         ))}

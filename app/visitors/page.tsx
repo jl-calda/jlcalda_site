@@ -25,7 +25,7 @@ const VisitorsPage = async () => {
       <div className="w-full flex flex-row justify-between items-center py-2">
         <div className="px-2 py-1 bg-gray-800 text-white flex-0 max-w-fit">
           <h2 className={clsx(merriweather.className, "text-white", "m-0")}>
-            Visitors' Messages
+            {`Visitors' Messages`}
           </h2>
         </div>
         <UsersAvatars users={users} />
