@@ -107,7 +107,6 @@ export default function Home() {
           />
         ))}
       </div>
-
       <div className="bg-gray-800 text-white rounded-md pt-2 px-2 py-6">
         <TooltipBox
           text="Go to projects"
@@ -131,6 +130,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+
       <h2 className="m-0 pt-8 pb-2">About this site</h2>
       <p className="text-xs font-light">
         This is designed using next-js, tailwindcss, next-auth, prisma and

@@ -145,7 +145,7 @@ export const projects = [
       "/images/messenger-clone/photo-4.png",
       "/images/messenger-clone/photo-5.png",
     ],
-    liveUrl: "https://jl-next-airbnb-clone.vercel.app",
+    liveUrl: "https://jl-next-messenger-clone.vercel.app",
     githubUrl: "https://github.com/jl-calda/next-messenger-clone",
     featured: true,
   },
